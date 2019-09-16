@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Web Regression Suite" parallel="true" thread-count="1">
+<suite name="Web Regression Suite" thread-count="2" parallel="false">
 	<listeners>
 		<listener class-name="com.common.listners.TestNgListners" />
 		<listener class-name="com.common.listners.AnnotationTransformer" />

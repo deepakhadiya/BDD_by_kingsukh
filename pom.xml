@@ -16,6 +16,13 @@
 		<testSuiteFile>config/web/testng.xml</testSuiteFile>
 	</properties>
 
+<repositories>
+    <repository>
+      <id>forplay-legacy</id>
+      <url>http://forplay.googlecode.com/svn/mavenrepo</url>
+    </repository>
+  </repositories>
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-client -->
 		<dependency>
@@ -31,22 +38,31 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.7</version>
-			<scope>test</scope>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>6.14.3</version>
+		    <scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
 		<dependency>
-		    <groupId>io.appium</groupId>
-		    <artifactId>java-client</artifactId>
-		    <version>4.1.2</version>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <version>2.6</version>
 		</dependency>
+
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>6.1.0</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>4.0.1</version>
+			<version>4.1.0</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
@@ -93,9 +109,9 @@
 			<version>0.8.1</version>
 		</dependency>
 		<dependency>
-		    <groupId>com.relevantcodes</groupId>
-		    <artifactId>extentreports</artifactId>
-		    <version>2.41.2</version>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
 		</dependency>
 	</dependencies>
 
@@ -118,12 +134,12 @@
 						<suiteXmlFile>${testSuiteFile}</suiteXmlFile>
 					</suiteXmlFiles>
 					<properties>
-<!-- 						Setting ReportNG listeners -->
-<!-- 						<property> -->
-<!-- 							<name>listener</name> -->
-<!-- 							<value>org.uncommons.reportng.HTMLReporter, -->
-<!-- 								org.uncommons.reportng.JUnitXMLReporter</value> -->
-<!-- 						</property> -->
+						<!-- Setting ReportNG listeners -->
+						<!-- <property> -->
+						<!-- <name>listener</name> -->
+						<!-- <value>org.uncommons.reportng.HTMLReporter, -->
+						<!-- org.uncommons.reportng.JUnitXMLReporter</value> -->
+						<!-- </property> -->
 					</properties>
 				</configuration>
 			</plugin>
